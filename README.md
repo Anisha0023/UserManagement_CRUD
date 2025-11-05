@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+🧑‍💻 User Management CRUD Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React + TypeScript CRUD application for managing users, built with reusable components, validation, toast notifications, and mock backend integration using JSON Server.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+Create, Read, Update, Delete (CRUD) operations for users
 
-### `npm start`
+Reusable components (Modal, InputField, MultiSelect, Toast, Breadcrumb)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Form validation with inline error handling
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Dynamic country selection using multi-select dropdown
 
-### `npm test`
+User details view page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Success/Error notifications using react-toastify
 
-### `npm run build`
+Clean, modern UI styled with Tailwind CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🧩 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+⚛️ React (TypeScript)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🎨 Tailwind CSS
 
-### `npm run eject`
+🔔 React Toastify
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🌐 Axios
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+💾 JSON Server (for mock backend)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+🏗️ Project Structure look like this
+src/
+ ├── Component/
+ │   ├── BreadCrumb.tsx
+ │   ├── InputField.tsx
+ │   ├── Modal.tsx
+ │   ├── MultiSelectField.tsx
+ │   └── Toast.tsx
+ │
+ ├── Pages/
+ │   ├── Home.tsx
+ │   └── UserView.tsx
+ │
+ ├── App.tsx
+ └── index.tsx
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+⚙️ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/user-crud-app.git
+cd user-crud-app
 
-## Learn More
+2️⃣ Install Dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3️⃣ Start the Mock Backend (JSON Server)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the JSON server to simulate API endpoints:
+
+npx json-server --watch db.json --port 5000
+
+
+Make sure your db.json file looks like this:
+
+{
+  "users": [
+    {
+      "id": 1,
+      "UserName": "Anisha",
+      "Countries": ["India", "USA"],
+      "Code": "A101"
+    }
+  ],
+  "countries": [
+    { "name": "India" },
+    { "name": "USA" },
+    { "name": "UK" },
+    { "name": "Germany" }
+  ]
+}
+
+4️⃣ Start the React App
+npm start
+
+
+The app will run on
+👉 Frontend: http://localhost:3000
+👉 Backend (Mock): http://localhost:5000
+
+🧠 Key Components
+Component	Description
+Modal	For adding or editing users
+InputField	Reusable input with label
+MultiSelectField	Select multiple countries as tags
+Toast	Displays success/error messages
+Breadcrumb	For navigation hierarchy
+UserView	Displays individual user details
+🧰 Available Scripts
+Command	Description
+npm start	Runs the app in development mode
+npm run build	Builds the app for production
+npx json-server --watch db.json --port 5000	Runs mock API server
