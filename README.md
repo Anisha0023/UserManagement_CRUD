@@ -4,9 +4,9 @@ A simple React + TypeScript CRUD application for managing users, built with reus
 
 🚀 Features
 
-Create, Read, Update, Delete (CRUD) operations for users
+Create, Read, Update operations for users
 
-Reusable components (Modal, InputField, MultiSelect, Toast, Breadcrumb)
+Reusable components (Modal, InputField, MultiSelect, Toast, Breadcrumb,DataTable)
 
 Form validation with inline error handling
 
